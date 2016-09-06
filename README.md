@@ -73,4 +73,4 @@ gulp.task('default', function () {
 gulp         // 默认运行，需要设置default的值
 gulp images  // 运行图片压缩任务
 </pre>
-
+<p>参考链接：<a href="http://blog.csdn.net/yczz/article/details/49636629" target="_blank" />http://blog.csdn.net/yczz/article/details/49636629</a></p>
