@@ -41,16 +41,11 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload'),
     del = require('del');
-    
 gulp只有4个方法： task ， watch ， src ，和 dest
-<div style="background-color:#ccc">
-<pre>
 task 这个API用来创建任务
 watch 这个API用来监听任务
 src 这个API是处理的原文件
 dest 这个API是处理完存放的路径
-</pre>
-</div>
 <h5>建立任务</h5>
 写在gulpfile.js文件内
 // 图片压缩
