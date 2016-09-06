@@ -41,6 +41,7 @@ var gulp = require('gulp'),
     cache = require('gulp-cache'),
     livereload = require('gulp-livereload'),
     del = require('del');
+    
 gulp只有4个方法： task ， watch ， src ，和 dest
 task 这个API用来创建任务
 watch 这个API用来监听任务
