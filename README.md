@@ -7,6 +7,23 @@ npm install gulp -g
 安装完之后我们创建一个项目文件夹project（名字随意）
 然后在该目录下执行 npm init 命令
 npm init命令会为你创建一个package.json文件
+package.json 中包含各种所需模块以及项目的配置信息（名称、版本、许可证等）meta 信息。
+包含可配置项:
+name 名称;
+description 应用描述;
+version 版本号;
+config 应用的配置项;
+author 作者;
+respository 资源仓库地址;
+licenses 授权方式;
+directories 目录;
+main 应用入口文件;
+bin 命令行文件;
+dependencies 项目应用运行依赖模块;
+devDependencies 项目应用开发环境依赖;
+engines 运行引擎;
+script 脚本;
+
 这个文件保存着这个项目相关信息。比如你用到的各种依赖（这里主要是插件）
 然后执行如下命令
 npm install gulp --save-dev
