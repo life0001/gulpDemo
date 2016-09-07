@@ -14,7 +14,7 @@ description 应用描述;
 version 版本号;
 config 应用的配置项;
 author 作者;
-respository 资源仓库地址;
+repository 资源仓库地址;
 licenses 授权方式;
 directories 目录;
 main 应用入口文件;
