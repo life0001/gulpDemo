@@ -7,7 +7,7 @@ npm install gulp -g
 安装完之后我们创建一个项目文件夹project（名字随意）
 然后在该目录下执行 npm init 命令
 npm init命令会为你创建一个package.json文件
-package.json 中包含各种所需模块以及项目的配置信息（名称、版本、许可证等）meta 信息，这个文件保存着这个项目用到的相关依赖 插件。
+package.json 中包含各种所需模块（插件）以及项目的配置信息（名称、版本、许可证等）meta 信息。
 配置项:
 name 名称;
 description 应用描述;
