@@ -71,6 +71,13 @@ gulp.task('images', function () {
 		.pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))
 		.pipe(gulp.dest('dest/img'));
 });
+// css压缩合并
+    gulp.task('css', function () {
+        return gulp.src('css/*')
+            .pipe(concat('base1.0,train_ticket_min.css'))   // 合并
+            .pipe(cssmin())                                 // 压缩
+            .pipe(gulp.dest('dest/css'));                   // 输出concat定义的文件名
+    });
 // clean
 gulp.task('Clean', function (cb) {
 	del(['dest/img'], cb)
