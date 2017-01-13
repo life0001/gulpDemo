@@ -33,7 +33,7 @@ sass的编译（gulp-ruby-sass）
 自动添加css前缀（gulp-autoprefixer）
 压缩css（gulp-minify-css）
 js代码校验（gulp-jshint）
-合并js文件（gulp-concat）
+合并文件（gulp-concat）
 压缩js代码（gulp-uglify）
 压缩图片（gulp-imagemin）
 自动刷新页面（gulp-livereload） //需要浏览器安装livereload插件才可以
@@ -71,13 +71,22 @@ gulp.task('images', function () {
 		.pipe(imagemin({optimizationLevel: 3, progressive: true, interlaced: true}))
 		.pipe(gulp.dest('dest/img'));
 });
+
 // css压缩合并
-    gulp.task('css', function () {
-        return gulp.src('css/*')
-            .pipe(concat('base1.0,train_ticket_min.css'))   // 合并
-            .pipe(cssmin())                                 // 压缩
-            .pipe(gulp.dest('dest/css'));                   // 输出concat定义的文件名
-    });
+gulp.task('css', function () {
+    return gulp.src('css/*')
+        .pipe(concat('base1.0,train_ticket_min.css'))      // 合并
+        .pipe(cssmin())                                    // 压缩
+        .pipe(gulp.dest('dest/css'));                      // 输出文件名是上面concat方法所设置的文件名
+});
+
+// js压缩合并
+gulp.task('js', function () {
+    return gulp.src('js/*')
+        .pipe(concat('jquery.1.9.1,jquery-jvectormap-2.0.3.min,visa,visaMap.min.js'))
+        .pipe(jsmin())
+        .pipe(gulp.dest('dest/js'));
+});
 // clean
 gulp.task('Clean', function (cb) {
 	del(['dest/img'], cb)
@@ -96,5 +105,6 @@ gulp.task('default', function () {
 gulp         // 默认运行，需要设置default的值
 gulp images  // 运行图片压缩任务
 gulp css     // 运行css合并压缩任务
+gulp js      // 运行js合并压缩任务
 </pre>
 <p>参考链接：<a href="http://blog.csdn.net/yczz/article/details/49636629" target="_blank" >http://blog.csdn.net/yczz/article/details/49636629</a></p>
